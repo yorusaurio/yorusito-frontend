@@ -3,9 +3,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import SearchSidebar from './SearchSidebar';
+import CartWidget from './CartWidget';
 
 export default function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   return (
     <>
@@ -120,15 +122,18 @@ export default function Header() {
           </Link>
 
           {/* Cart */}
-          <Link href="/cart" className="text-gray-600 hover:text-red-500 transition-colors relative p-2 rounded-full hover:bg-gray-100">
+          <button 
+            onClick={() => setIsCartOpen(true)}
+            className="text-gray-600 hover:text-red-500 transition-colors relative p-2 rounded-full hover:bg-gray-100"
+          >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
             </svg>
             {/* Cart count badge - Minimal */}
             <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-medium">
-              1
+              4
             </span>
-          </Link>
+          </button>
         </div>
 
         {/* Mobile menu button - Minimal */}
@@ -142,6 +147,9 @@ export default function Header() {
 
     {/* Search Sidebar */}
     <SearchSidebar isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+    
+    {/* Cart Widget */}
+    <CartWidget isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
   </>
   );
 }

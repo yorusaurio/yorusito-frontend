@@ -82,15 +82,15 @@ export default function HomePage() {
           <div className="grid grid-cols-3 gap-8 sm:gap-12 max-w-2xl mx-auto minimal-fade-in" style={{ animationDelay: '0.8s' }}>
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-light text-gray-900 mb-2">500+</div>
-              <div className="text-sm text-gray-500 uppercase tracking-wide">Designs</div>
+              <div className="text-sm text-gray-500 uppercase tracking-wide">Diseños</div>
             </div>
             <div className="text-center border-l border-r border-gray-200">
               <div className="text-3xl sm:text-4xl font-light text-gray-900 mb-2">24h</div>
-              <div className="text-sm text-gray-500 uppercase tracking-wide">Express</div>
+              <div className="text-sm text-gray-500 uppercase tracking-wide">Envío Express</div>
             </div>
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-light text-gray-900 mb-2">100%</div>
-              <div className="text-sm text-gray-500 uppercase tracking-wide">Quality</div>
+              <div className="text-sm text-gray-500 uppercase tracking-wide">Calidad premium</div>
             </div>
           </div>
         </div>
